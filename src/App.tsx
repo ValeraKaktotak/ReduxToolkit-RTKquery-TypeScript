@@ -1,3 +1,4 @@
+import { PostContainer } from "components/PostContainer";
 import { useAppDispatch, useAppSelector } from "hooks/redux";
 import { useEffect } from "react";
 import { fetchUsers } from "store/reducers/ActionCreators";
@@ -14,12 +15,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Hello</h1>
+      {/* <h1>Hello</h1>
       <p>
         {isLoading && <h1>Loading...</h1>}
         {error && <h1>{error}</h1>}
         {users.length > 0 && JSON.stringify(users, null, 2)}
-      </p>
+      </p> */
+      <PostContainer />}
     </div>
   );
 };
