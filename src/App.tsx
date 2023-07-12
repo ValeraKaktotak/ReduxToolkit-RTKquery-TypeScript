@@ -1,14 +1,16 @@
-import { useAppDispatch, useAppSelector } from 'hooks/redux';
-import { useEffect } from 'react';
-import { fetchUsers } from 'store/reducers/ActionCreators';
+import { useAppDispatch, useAppSelector } from "hooks/redux";
+import { useEffect } from "react";
+import { fetchUsers } from "store/reducers/ActionCreators";
 
 const App = () => {
-  const {users, isLoading, error} = useAppSelector(state => state.userReducer)
-  const dispatch = useAppDispatch()
+  const { users, isLoading, error } = useAppSelector(
+    (state) => state.userReducer
+  );
+  const dispatch = useAppDispatch();
 
-  useEffect(()=>{
-    dispatch(fetchUsers())
-  }, [])
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, []);
 
   return (
     <div className="App">
@@ -20,6 +22,6 @@ const App = () => {
       </p>
     </div>
   );
-}
+};
 
 export default App;
